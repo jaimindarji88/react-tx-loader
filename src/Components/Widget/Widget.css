@@ -3,3 +3,12 @@ h1{
     font-weight: normal;
     margin-left:10px;
 }
+
+.txHash{
+    font-size: 14px;
+}
+
+.txHash:hover{
+    cursor:pointer;
+    text-decoration: underline
+}

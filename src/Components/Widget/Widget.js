@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Checkmark from '../Checkmark/Checkmark';
 import './Widget.css';
 import IconMenu from 'material-ui/IconMenu';
 import IconButton from 'material-ui/IconButton';
@@ -16,7 +17,7 @@ class Widget extends Component {
         this.state = {
           value: 3,
         };
-      }
+    }
     
     handleChange = (event, index, value) => this.setState({value});
 
@@ -24,11 +25,14 @@ class Widget extends Component {
         return (
             <Toolbar>
                 <ToolbarGroup firstChild={true}>
-                    <CircularProgress style={{marginLeft:10}} />
+                    {this.props.loading ? 
+                        <Checkmark /> :
+                        <Checkmark />
+                    }
                     <h1>Progress Indicator</h1>
                 </ToolbarGroup>
                 <ToolbarGroup>
-                <ToolbarTitle text="Options" />
+                <ToolbarTitle style={{fontSize:14}} className="txHash" text="0x1f1e365ebab5181ddfbc8f98333deb3f849e90ad060a5187a744de432c7b4adf" />
                 <FontIcon className="muidocs-icon-custom-sort" />
                 <ToolbarSeparator />
                 <IconMenu

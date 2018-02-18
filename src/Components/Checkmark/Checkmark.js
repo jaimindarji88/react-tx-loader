@@ -9,6 +9,7 @@ class Checkmark extends Component {
         };
     }
     render() {
+      console.log('loading',this.props.loading);
         switch (this.props.loading) {
             case true:
             return (

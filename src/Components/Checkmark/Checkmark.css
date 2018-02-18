@@ -24,6 +24,13 @@
   transition: border 500ms ease-out;
 }
 
+.load-failed {
+  -webkit-animation: none;
+  animation: none;
+  border-color: #970000;
+  transition: border 500ms ease-out;
+}
+
 .checkmark {
   display: none;
 }

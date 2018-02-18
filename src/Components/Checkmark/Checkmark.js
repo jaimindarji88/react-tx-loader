@@ -19,8 +19,8 @@ class Checkmark extends Component {
             );
             case false:
             return (
-                <div className={"circle-loader load-complete"}>
-                    <div style={{display:'block'}} className="checkmark draw"></div>
+                <div className={this.props.error ? "circle-loader load-failed" : "circle-loader load-complete"}>
+                    <div style={{display:'block'}} className={this.props.error ? "checkmark" : "checkmark draw"}></div>
                 </div>
             );
         }

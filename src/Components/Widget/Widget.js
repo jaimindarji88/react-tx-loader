@@ -49,7 +49,8 @@ class Widget extends Component {
     onerror = (evt) => {
       console.log('error', evt)
       this.setState({
-        error: true
+        error: true,
+        loading: false
       })
     }
 
@@ -79,8 +80,8 @@ class Widget extends Component {
             target="_blank"
             href={"https://etherscan.io/tx/" + this.props.tx}>
                 <div className="container" style={{width:this.state.styles.width, height:this.state.styles.height, background:this.state.styles.background}}>
-                    <Checkmark loading={this.state.loading} />
-                    <h1 className={this.state.loading ? 'status animate-flicker' : 'status'}>{this.state.loading ? 'Processing' : 'Completed'}
+                    <Checkmark loading={this.state.loading} error={this.state.error} />
+                    <h1 className={this.state.loading ? 'status animate-flicker' : 'status'}>{this.state.loading ? 'Processing' : (this.state.error ? 'Failed' : 'Completed')}
                     </h1>
                 </div>
             </a>

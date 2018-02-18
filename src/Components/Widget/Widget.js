@@ -60,13 +60,10 @@ class Widget extends Component {
       
       if (data.result) {
         for (const tx of data.result) {
-          console.log(tx.hash === this.props.tx);
           if (tx.hash === this.props.tx) {
-            console.log('-------')
             this.setState({
               loading: false
             });
-            console.log('state', this.state);
           }
         }
 

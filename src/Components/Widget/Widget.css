@@ -4,19 +4,23 @@ h1{
     margin-left:10px;
 }
 
-.txHash{
-    font-size: 14px;
+a{
+    text-decoration: none;
 }
 
-.txHash:hover{
-    cursor:pointer;
-    text-decoration: underline
+.status{
+    color:#5cb85c;
+}
+
+.txHash{
+    font-size: 14px;
 }
 
 .container{
     display:flex;
     align-items: center;
     justify-content: center;
+    cursor:pointer
 }
 
 @keyframes flickerAnimation {
@@ -40,9 +44,9 @@ h1{
     100% { opacity:1; }
   }
   .animate-flicker {
-     -webkit-animation: flickerAnimation 3s infinite;
-     -moz-animation: flickerAnimation 3s infinite;
-     -o-animation: flickerAnimation 3s infinite;
-      animation: flickerAnimation 3s infinite;
+     -webkit-animation: flickerAnimation 2s infinite;
+     -moz-animation: flickerAnimation 2s infinite;
+     -o-animation: flickerAnimation 2s infinite;
+      animation: flickerAnimation 2s infinite;
   }
 

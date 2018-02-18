@@ -36,10 +36,16 @@ class Widget extends Component {
 
     render() {
         return (
-            <div className="container" style={{width:this.state.styles.width, height:this.state.styles.height, background:this.state.styles.background}}>
-                <Checkmark color={this.state.styles.mainColor} loading={this.props.loading} />
-                <h1 className={this.props.loading ? 'animate-flicker' : ''} 
-                    style={{color:this.state.styles.mainColor}}>{this.props.loading ? 'Processing' : 'Completed'}</h1>
+            <div style={{width:this.state.styles.width, height:this.state.styles.height}}>
+            <a 
+            target="_blank"
+            href="https://etherscan.io/tx/0x1f1e365ebab5181ddfbc8f98333deb3f849e90ad060a5187a744de432c7b4adf">
+                <div className="container" style={{width:this.state.styles.width, height:this.state.styles.height, background:this.state.styles.background}}>
+                    <Checkmark loading={this.props.loading} />
+                    <h1 className={this.props.loading ? 'status animate-flicker' : 'status'}>{this.props.loading ? 'Processing' : 'Completed'}
+                    </h1>
+                </div>
+            </a>
             </div>
         );
     }

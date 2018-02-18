@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       loading:true,
       percent:0,
-      tx:undefined
+      tx:undefined,
+      address:undefined
     };
 }
 handleClick = () => {
@@ -21,8 +22,9 @@ handleClick = () => {
     return (
       <MuiThemeProvider>
         <div>
-          <Widget width={500} height={200} theme='dark' mainColor='#5cb85c' loading={this.state.loading} percent={this.state.percent} tx={this.state.tx} />
+          <Widget width={300} height={200} theme='dark' loading={this.state.loading} percent={this.state.percent} tx={this.state.tx} address={this.state.address} />
           <TextField hintText="Enter Address" />
+          <TextField hintText="Enter Tx" />
           <FlatButton label="test" onClick={this.handleClick} />
         </div>
       </MuiThemeProvider>

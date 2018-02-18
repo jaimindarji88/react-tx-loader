@@ -1,6 +1,6 @@
 {
   "name": "react-tx-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "bourbon": "^5.0.0",
     "material-ui": "^0.20.0",

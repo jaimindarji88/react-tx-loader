@@ -77,7 +77,7 @@ class Widget extends Component {
             <div style={{width:this.state.styles.width, height:this.state.styles.height}}>
             <a 
             target="_blank"
-            href="https://etherscan.io/tx/0x1f1e365ebab5181ddfbc8f98333deb3f849e90ad060a5187a744de432c7b4adf">
+            href={"https://etherscan.io/tx/" + this.props.tx}>
                 <div className="container" style={{width:this.state.styles.width, height:this.state.styles.height, background:this.state.styles.background}}>
                     <Checkmark loading={this.state.loading} />
                     <h1 className={this.state.loading ? 'status animate-flicker' : 'status'}>{this.state.loading ? 'Processing' : 'Completed'}

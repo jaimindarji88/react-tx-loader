@@ -3,6 +3,7 @@ import Widget from './Components/Widget/Widget';
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
 
 class App extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ handleClick = () => {
       <MuiThemeProvider>
         <div>
           <Widget width={500} height={200} theme='dark' mainColor='#5cb85c' loading={this.state.loading} percent={this.state.percent} tx={this.state.tx} />
+          <TextField hintText="Enter Address" />
           <FlatButton label="test" onClick={this.handleClick} />
         </div>
       </MuiThemeProvider>

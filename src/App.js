@@ -20,7 +20,7 @@ handleClick = () => {
     return (
       <MuiThemeProvider>
         <div>
-          <Widget loading={this.state.loading} percent={this.state.percent} tx={this.state.tx} />
+          <Widget width={500} height={200} theme='dark' mainColor='#5cb85c' loading={this.state.loading} percent={this.state.percent} tx={this.state.tx} />
           <FlatButton label="test" onClick={this.handleClick} />
         </div>
       </MuiThemeProvider>

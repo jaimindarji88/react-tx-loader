@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Widget from './Components/Widget/Widget';
+import Widget from './index';
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import FlatButton from 'material-ui/FlatButton';

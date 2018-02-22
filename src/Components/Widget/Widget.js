@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Checkmark from '../Checkmark/Checkmark';
 import './Widget.css';
 
@@ -61,11 +63,13 @@ class Widget extends Component {
       
       if (data.result) {
         for (const tx of data.result) {
+
           if (tx.hash === this.props.tx) {
             this.setState({
               loading: false
             });
           }
+          
         }
 
       }
@@ -89,5 +93,12 @@ class Widget extends Component {
         );
     }
 }
+
+Widget.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  tx: PropTypes.string,
+  address: PropTypes.string
+};
 
 export default Widget;
